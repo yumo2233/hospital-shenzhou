@@ -69,10 +69,16 @@ Vue.prototype.ajax = function(url, method, data, fun, load) {
 				uni.hideLoading()
 			}
 			if (resp.statusCode == 401) {
+				uni.removeStorageSync("token")
 				uni.showToast({
 					icon: "error",
 					title: "请登录小程序"
 				})
+				setTimeout(() => {
+					uni.switchTab({
+						"url":"/pages/mine/mine"
+					})
+				}, 2000);
 			} else if (resp.statusCode == 200 && resp.data.code == 200) {
 				let data = resp.data
 				if (data.hasOwnProperty("token")) {
