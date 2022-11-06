@@ -32,7 +32,6 @@
 			:data="dataList"
 			border
 			v-loading="dataListLoading"
-			@selection-change="selectionChangeHandle"
 			:cell-style="{ padding: '7px 0' }"
 			:header-cell-style="{ 'background-color': '#e0e0e0' }"
 			style="width: 100%;"
