@@ -155,7 +155,6 @@ export default {
 			pageSize: 10,
 			totalCount: 0,
 			dataListLoading: false,
-			dataListSelections: [],
 			dataRule: {
 				doctorName: [{ required: false, pattern: '^[a-zA-Z0-9\u4e00-\u9fa5]{1,20}$', message: '姓名格式错误' }]
 			}
