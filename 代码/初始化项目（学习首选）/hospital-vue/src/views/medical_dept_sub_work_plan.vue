@@ -38,7 +38,7 @@
 		>
 			<el-table-column type="index" header-align="center" align="center" width="100" label="序号">
 				<template #default="scope">
-					<span>{{ (pageIndex - 1) * pageSize + scope.$index + 1 }}</span>
+					<span>{{ scope.$index + 1 }}</span>
 				</template>
 			</el-table-column>
 			<el-table-column
