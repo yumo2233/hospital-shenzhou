@@ -1,6 +1,6 @@
 <template>
     <el-dialog
-        title="新增"
+        :title="dataForm.workPlanId==null?'新增':'修改'"
         v-if="isAuth(['ROOT', 'SCHEDULE:INSERT', 'SCHEDULE:UPDATE'])"
         :close-on-click-modal="false"
         v-model="visible"
